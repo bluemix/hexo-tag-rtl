@@ -42,4 +42,4 @@ which results in
 
 ## Authors
 
-[blueMix](bluemix.me)
+[blueMix](http://bluemix.me)
