@@ -5,14 +5,16 @@
 * Licensed under the MIT license.
 *
 * Syntax:
-* {% rtl %}
+* {% rtl [html tag]%}
 *  <RTL text> 
 * {% endrtl %} 
 */
 
 hexo.extend.tag.register('rtl', function(args, content){
-	var tag = "<p dir='rtl'>"
+	var className = "div"
+	if (args[0]) { className = args[0] }
+	var tag = "<" + className + " dir='rtl'>"
 	tag += content
-	tag += "</p>"
+	tag += "</" + className + ">"
 	return tag;
 }, {ends: true});

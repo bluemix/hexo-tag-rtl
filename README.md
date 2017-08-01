@@ -13,17 +13,27 @@ npm install --save hexo-tag-rtl
 ## Usage
 
 ```bash
-{% rtl %}
+{% rtl [css class]%}
   RTL text
 {% endrtl %} 
 ```
+
+`css class` defaults to `div`
+
 ## Example
 
 An English document, but wants to have and RTL direction
 
 ```
-مقتطفات من بعض الحكم
+{% rtl div %}
+{% blockquote  جلال الدين الرومي  %}
+    أدينُ بدينِ الحبِّ أنى توجَّهت ركائِبهُ ، فالحبٌّ ديني و إيماني.
+{% endblockquote %}
+{% endrtl %}
+```
 
+and 
+```
 {% rtl %}
 مقتطفات من بعض الحكم
 {% endrtl %}
